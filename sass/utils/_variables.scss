@@ -1,0 +1,63 @@
+:root {
+  --main-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-text: #2196f3;
+  --white: #ffffff;
+  --link-color: #afb1b8;
+  --background-team-section: #f5f4fa;
+  --background-hero-section: #2f303a;
+  --footer-link-color: #ffffff99;
+  --background-footer-link: #ffffff1a;
+  --modal-background-color: rgba(0, 0, 0, 0.2);
+  --timing-fn: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Главные свойства
+$main-font: Roboto, sans-serif;
+$secondary-font: Raleway;
+$main-letter-spacing: 0.03em;
+
+// Свойства контейнера
+$desktop-container-width: 480px;
+$desktop-container-width: 768px;
+$desktop-container-width: 1200px;
+$container-left-padding: 15px;
+$container-right-padding: 15px;
+
+// Лого текст
+$font-weight: 700;
+
+$mobile-font-size: 24px;
+$mobile-line-height: 1.17;
+
+//page-header-text
+$header-padding-top: 32px;
+$header-padding-bottom: 32px;
+$header-font-weight: 500;
+$header-font-size: 14px;
+$header-line-height: 1.14;
+$header-letter-spacing: 0.02em;
+
+$timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Hero
+$hero-max-width: 1600px;
+
+$linear-gradient: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
+$hero-padding-top: 200px;
+$hero-padding-bottom: 200px;
+$hero-min-height: 600px;
+
+// hero-title
+$hero-margin: 0 auto 30px auto;
+$hero-color: var(--white);
+$hero-font-weight: 900;
+$hero-font-size: 44px;
+$hero-line-height: 1.36;
+$hero-letter-spacing: 0.06em;
+$hero-text-transform: uppercase;
+
+// Портфолио
+/* маржин 30px, 2маржина в строке, 3 элимента в строке */
+$margin-right-width: 30px;
+$portfolio-margin-width: calc((100% - 30px * 2) / 3);

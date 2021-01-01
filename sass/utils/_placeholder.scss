@@ -1,0 +1,70 @@
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-left-padding;
+  padding-right: $container-right-padding;
+}
+
+%page-header-text {
+  padding-top: $header-padding-top;
+  padding-bottom: $header-padding-bottom;
+
+  font-weight: $header-font-weight;
+  font-size: $header-font-size;
+  line-height: $header-line-height;
+  letter-spacing: $header-letter-spacing;
+}
+
+%section {
+  padding-bottom: 94px;
+}
+
+// Кнопка
+
+%button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0px solid transparent;
+  min-width: 200px;
+
+  color: var(--white);
+  background-color: var(--accent-text);
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+}
+
+// Модалка
+
+%form-name-message {
+  margin-bottom: 20px;
+}
+
+// Портфолио
+
+%radio-button-first {
+  min-width: 73px;
+}
+
+%radio-button-second {
+  min-width: 128px;
+}
+
+%radio-button-third {
+  min-width: 73px;
+}
+
+%radio-button-fourth {
+  min-width: 73px;
+}
+
+%radio-button-fifth {
+  min-width: 500px;
+}

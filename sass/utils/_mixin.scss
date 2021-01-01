@@ -1,0 +1,312 @@
+@mixin centered-flex($type: flex, $align: center) {
+  display: $type;
+  align-items: $align;
+}
+
+// Кнопка модалки
+
+@mixin close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @include centered-flex;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+// Скрывает текст
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Лого
+@mixin logo-general-styles {
+  display: inline-block;
+  font-family: $secondary-font, sans-serif;
+  font-weight: $font-weight;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+@mixin logo-mobile-styles {
+  font-size: $mobile-font-size;
+  line-height: $mobile-line-height;
+}
+
+@mixin logo-tablet-styles {
+  display: inline-block;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+
+@mixin logo-desktop-styles {
+  display: inline-block;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+
+//Блок Герой
+@mixin hero-section {
+  background-image: linear-gradient($linear-gradient), url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--background-hero-section);
+  background-position: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: $hero-padding-top;
+  padding-bottom: $hero-padding-bottom;
+
+  max-width: $hero-max-width;
+  min-height: $hero-min-height;
+
+  text-align: center;
+}
+
+@mixin hero-title {
+  margin: $hero-margin;
+
+  max-width: 696px;
+  color: $hero-color;
+
+  font-weight: $hero-font-weight;
+  font-size: $hero-font-size;
+  line-height: $hero-line-height;
+  letter-spacing: $hero-letter-spacing;
+  text-transform: $hero-text-transform;
+}
+
+// Название секций
+@mixin section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: var(--main-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+// Блок Особености
+@mixin h3-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: var(--main-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+@mixin p-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: var(--secondary-text-color);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+//Чем мы занимаемся
+
+@mixin accent-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+@mixin projects-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  @include centered-flex;
+  justify-content: center;
+
+  background: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+
+  @include accent-text;
+}
+
+// Команда
+@mixin team-name {
+  margin-bottom: 10px;
+
+  color: var(--main-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+@mixin team-speciality {
+  margin-bottom: 16px;
+
+  color: var(--secondary-text-color);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+@mixin team-social-list {
+  @include centered-flex;
+  justify-content: space-between;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  width: 206px;
+}
+
+// Footer
+
+@mixin footer-address-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@mixin footer-social-link {
+  @include centered-flex;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: var(--background-footer-link);
+
+  transition: background-color var(--timing-fn);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-text);
+
+    transition: background-color var(--timing-fn);
+  }
+}
+
+// Модальное Окно
+
+@mixin modal-text {
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+
+  color: var(--main-text-color);
+}
+
+@mixin form-name {
+  display: block;
+  text-align: start;
+
+  margin-bottom: 10px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+}
+
+@mixin form-policy-text {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--secondary-text-color);
+}
+
+// Портфолио
+
+@mixin radio-button {
+  display: inline-block;
+  color: var(--main-text-color);
+  background-color: var(--background-team-section);
+  border-radius: 4px;
+  border: 0 solid transparent;
+  padding: 6px 22px;
+
+  min-width: 73px;
+
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+
+  transition: background-color, color var(--timing-fn);
+
+  cursor: pointer;
+}
+
+// Галерея проектов
+@mixin hover-card-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--white);
+}
+
+@mixin portfolio-project-name {
+  color: var(--main-text-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+@mixin portfolio-project-type {
+  color: var(--secondary-text-color);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+}
