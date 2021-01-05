@@ -10,6 +10,7 @@
   --background-footer-link: #ffffff1a;
   --modal-background-color: rgba(0, 0, 0, 0.2);
   --timing-fn: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --header-color-bottom: #ececec;
 }
 
 // Главные свойства
@@ -25,10 +26,16 @@ $container-left-padding: 15px;
 $container-right-padding: 15px;
 
 // Лого текст
-$font-weight: 700;
+$logo-font-weight: 700;
 
-$mobile-font-size: 24px;
-$mobile-line-height: 1.17;
+$logo-mobile-font-size: 24px;
+$logo-mobile-line-height: 1.17;
+
+//Стили текста для Header mobile
+$header-mobile-font-weight: 500;
+$header-mobile-font-size: 18px;
+$header-mobile-line-height: 1.17;
+$header-mobile-letter-spacing: 0.02em;
 
 //page-header-text
 $header-padding-top: 32px;

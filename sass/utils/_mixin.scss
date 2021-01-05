@@ -41,15 +41,15 @@
 @mixin logo-general-styles {
   display: inline-block;
   font-family: $secondary-font, sans-serif;
-  font-weight: $font-weight;
+  font-weight: $logo-font-weight;
   text-decoration: none;
 
   cursor: pointer;
 }
 
 @mixin logo-mobile-styles {
-  font-size: $mobile-font-size;
-  line-height: $mobile-line-height;
+  font-size: $logo-mobile-font-size;
+  line-height: $logo-mobile-line-height;
 }
 
 @mixin logo-tablet-styles {
@@ -70,6 +70,15 @@
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+}
+
+// Стили текста для Header mobile
+
+@mixin mobile-text-header-style {
+  font-weight: $header-mobile-font-weight;
+  font-size: $header-mobile-font-size;
+  line-height: $header-mobile-line-height;
+  letter-spacing: $header-mobile-letter-spacing;
 }
 
 //Блок Герой

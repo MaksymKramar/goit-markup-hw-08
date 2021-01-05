@@ -1,5 +1,7 @@
 .page-header {
   position: relative;
+
+  border-bottom: 1px solid var(--header-color-bottom);
 }
 
 .page-header__container {
@@ -20,6 +22,7 @@
 
 .header__logo {
   @include logo-general-styles;
+
   @media screen and (max-width: 768px) {
     @include logo-mobile-styles;
 
@@ -72,7 +75,7 @@
     display: none;
 
     position: absolute;
-    top: 100%;
+    top: 101%;
     left: 0;
     width: 100%;
 
@@ -90,14 +93,53 @@
   }
 }
 
+.navigation__item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+}
+.navigation__link {
+  color: var(--main-text-color);
+  @media screen and (max-width: 767px) {
+    @include mobile-text-header-style;
+
+    position: relative;
+
+    &.current {
+      color: var(--accent-text);
+
+      &::after {
+        content: '';
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 4px;
+
+        background-color: var(--accent-text);
+        border-radius: 2px;
+      }
+    }
+  }
+}
 .contact__link {
+  @include mobile-text-header-style;
   @include centered-flex;
   justify-content: center;
 
   color: var(--secondary-text-color);
 
-  &:not(:last-child) {
-    margin-bottom: 16px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 }
 
