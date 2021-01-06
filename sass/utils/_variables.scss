@@ -18,12 +18,20 @@ $main-font: Roboto, sans-serif;
 $secondary-font: Raleway;
 $main-letter-spacing: 0.03em;
 
+// Свойства Секции
+$section-mobile-padding: 60px 0;
+
 // Свойства контейнера
 $desktop-container-width: 480px;
 $desktop-container-width: 768px;
 $desktop-container-width: 1200px;
 $container-left-padding: 15px;
 $container-right-padding: 15px;
+
+// Стили названий секций
+$section-mobile-font-weight: 700;
+$section-mobile-font-size: 28px;
+$section-mobile-line-height: 1.18;
 
 // Лого текст
 $logo-font-weight: 700;
@@ -51,20 +59,82 @@ $timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 $hero-max-width: 1600px;
 
 $linear-gradient: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
-$hero-padding-top: 200px;
-$hero-padding-bottom: 200px;
-$hero-min-height: 600px;
 
-// hero-title
-$hero-margin: 0 auto 30px auto;
+// $desktop-hero-padding-top: 200px;
+// $dsektop-hero-padding-bottom: 200px;
+
+// $hero-min-height: 600px;
+
+// common-hero-title
 $hero-color: var(--white);
 $hero-font-weight: 900;
-$hero-font-size: 44px;
-$hero-line-height: 1.36;
 $hero-letter-spacing: 0.06em;
 $hero-text-transform: uppercase;
+
+// mobile-hero-title
+$mobile-hero-font-size: 26px;
+$mobile-hero-line-height: 1.62;
+$mobile-hero-width: 360px;
+
+// desktop-hero-title
+$desktop-hero-margin: 0 auto 30px auto;
+$desktop-hero-font-size: 44px;
+$desktop-hero-line-height: 1.36;
+
+// Шрифт кнопки
+$button-font-family: $main-font;
+$button-font-weight: 700;
+$button-font-size: 16px;
+$button-line-height: 1.88;
+$button-letter-spacing: 0.06em;
+
+// Блок Особености
+
+// стили названий особеностей
+$features-h-font-weight: 700;
+$features-h-font-size: 14px;
+$features-h-line-height: 1.14;
+$features-h-text-transform: uppercase;
+
+// стили описания (текста) особеностей
+$features-p-font-weight: 400;
+$features-p-font-size: 14px;
+$features-p-line-height: 1.7;
+
+// Команда
+
+// мобильные стили Имени
+$team-name-font-weight: 500;
+$team-speciality-font-weight: 400;
+$team-font-size: 16px;
+$team-line-height: 1.19;
+
+// Клиенты
+
+/* маржин 15px, 1 маржин + 0.5*2 маржина по 
+бокам в строке, 2 элимента в строке 
+((100%-((0,5*2+1)*(15+15))/2)*/
+$clac-width-item: calc((100% - 2 * 30px) / 2);
+
+// Footer
+$footer-font-weight: 400;
+$footer-font-size: 14px;
+$footer-line-height: 1.7;
+
+// Модальное окно
+$mobile-modal-line-height: 1.5;
+$desktop-modal-line-height: 1.15;
+
+$label-font-weight: 400;
+$label-font-size: 12px;
+$label-line-height: 1.17;
+$label-letter-spacing: 0.01em;
+
+$mobile-policy-font-weight: 400;
+$mobile-policy-font-size: 12px;
+$mobile-policy-line-height: 1.17;
 
 // Портфолио
 /* маржин 30px, 2маржина в строке, 3 элимента в строке */
 $margin-right-width: 30px;
-$portfolio-margin-width: calc((100% - 30px * 2) / 3);
+$portfolio-margin-width: calc((100% - 15px * 2) / 2);

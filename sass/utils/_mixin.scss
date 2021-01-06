@@ -82,40 +82,57 @@
 }
 
 //Блок Герой
-@mixin hero-section {
-  background-image: linear-gradient($linear-gradient), url(../images/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--background-hero-section);
-  background-position: center;
+// @mixin hero-section {
+//   background-image: linear-gradient($linear-gradient), url(../images/bg.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-color: var(--background-hero-section);
+//   background-position: center;
 
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: $hero-padding-top;
-  padding-bottom: $hero-padding-bottom;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding-top: $hero-padding-top;
+//   padding-bottom: $hero-padding-bottom;
 
-  max-width: $hero-max-width;
-  min-height: $hero-min-height;
+//   max-width: $hero-max-width;
+//   min-height: $hero-min-height;
 
-  text-align: center;
-}
+//   text-align: center;
+// }
 
-@mixin hero-title {
-  margin: $hero-margin;
+// Текст Героя
 
-  max-width: 696px;
+@mixin common-hero-title {
   color: $hero-color;
-
   font-weight: $hero-font-weight;
-  font-size: $hero-font-size;
-  line-height: $hero-line-height;
   letter-spacing: $hero-letter-spacing;
   text-transform: $hero-text-transform;
 }
 
+@mixin mobile-hero-title {
+  font-size: $mobile-hero-font-size;
+  line-height: $mobile-hero-line-height;
+  max-width: $mobile-hero-width;
+}
+
+@mixin desktop-hero-title {
+  max-width: 696px;
+  margin: $desktophero-margin;
+}
+
 // Название секций
-@mixin section-title {
-  margin-top: 0;
+
+@mixin mobile-section-title {
+  margin-bottom: 30px;
+
+  color: var(--main-text-color);
+
+  font-weight: $section-mobile-font-weight;
+  font-size: $section-mobile-font-size;
+  line-height: $section-mobile-line-height;
+}
+
+@mixin desktop-section-title {
   margin-bottom: 50px;
 
   color: var(--main-text-color);
@@ -125,27 +142,25 @@
   line-height: 1.16;
   text-align: center;
 }
+
 // Блок Особености
-@mixin h3-text {
+@mixin features-h3-text {
   margin-top: 0;
   margin-bottom: 10px;
 
   color: var(--main-text-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
+  font-weight: $features-h-font-weight;
+  font-size: $features-h-font-size;
+  line-height: $features-h-line-height;
+  text-transform: $features-h-text-transform;
 }
 
-@mixin p-text {
-  margin-top: 0;
-  margin-bottom: 0;
-
+@mixin features-p-text {
   color: var(--secondary-text-color);
 
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-weight: $features-p-font-weight;
+  font-size: $features-p-font-size;
+  line-height: $features-p-line-height;
 }
 
 //Чем мы занимаемся
@@ -174,24 +189,10 @@
 }
 
 // Команда
-@mixin team-name {
-  margin-bottom: 10px;
 
-  color: var(--main-text-color);
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-}
-
-@mixin team-speciality {
-  margin-bottom: 16px;
-
-  color: var(--secondary-text-color);
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
+@mixin team-text {
+  font-size: $team-font-size;
+  line-height: $team-line-height;
 }
 
 @mixin team-social-list {
@@ -200,7 +201,6 @@
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
 
   width: 206px;
 }
@@ -208,9 +208,9 @@
 // Footer
 
 @mixin footer-address-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-weight: $footer-font-weight;
+  font-size: $footer-font-size;
+  line-height: $footer-line-height;
 }
 
 @mixin footer-social-link {
@@ -236,12 +236,8 @@
 // Модальное Окно
 
 @mixin modal-text {
-  text-align: center;
-
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
-
   color: var(--main-text-color);
 }
 
@@ -251,25 +247,25 @@
 
   margin-bottom: 10px;
 
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-
+  font-weight: $label-font-weight;
+  font-size: $label-font-size;
+  line-height: $label-line-height;
+  letter-spacing: $label-letter-spacing;
   color: var(--secondary-text-color);
 }
 
-@mixin form-policy-text {
+@mixin form-common-policy-text {
   display: flex;
   align-items: center;
-
   margin-bottom: 30px;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-
   color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+@mixin form-mobile-policy-text {
+  font-weight: $mobile-policy-font-weight;
+  font-size: $mobile-policy-font-size;
+  line-height: $mobile-policy-line-height;
 }
 
 // Портфолио
