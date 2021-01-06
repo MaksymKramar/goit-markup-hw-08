@@ -1,0 +1,149 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--modal-background-color);
+
+  transition: var(--timing-fn);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  min-height: 609px;
+
+  padding: 40px;
+
+  background-color: var(--white);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--timing-fn);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0) rotate(360deg);
+    transition: transform var(--timing-fn);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.close__btn {
+  @include close-btn;
+
+  &:hover .close__btn__icon,
+  &:focus .close__btn__icon {
+    fill: var(--accent-text);
+  }
+
+  &__icon {
+    transition: var(--timing-fn);
+  }
+}
+
+/* Делаем форму контакта */
+
+.modal-box {
+  text-align: center;
+}
+
+.modal__text {
+  @include modal-text;
+  line-height: $mobile-modal-line-height;
+}
+
+.form__name {
+  @include form-name;
+}
+
+.form__name__massage {
+  margin-bottom: 20px;
+}
+
+.input__wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+
+.form__input {
+  padding-left: 42px;
+
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: border-color var(--timing-fn);
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-text);
+    transition: border-color var(--timing-fn);
+  }
+}
+
+.form__input__message {
+  margin-top: 4px;
+  padding: 12px 16px;
+
+  height: 120px;
+  resize: none;
+}
+
+.modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transform: translateY(-50%);
+  transition: var(--timing-fn);
+
+  .form__input:focus + & {
+    fill: var(--accent-text);
+  }
+}
+
+.form__policy__text {
+  @include form-common-policy-text;
+  @include form-mobile-policy-text;
+}
+
+.form__policy__link {
+  text-decoration: underline;
+  color: var(--accent-text);
+}
+
+// Делаем CHECKBOX
+
+.checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.icon__check {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+
+  .checkbox:checked + & {
+    background-color: var(--accent-text);
+    background-image: url(../image/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: 2px solid var(--accent-text);
+  }
+}

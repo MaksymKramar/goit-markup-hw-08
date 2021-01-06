@@ -1,0 +1,63 @@
+.section__clients {
+  @extend %section;
+
+  @media screen and (max-width: 1199px) {
+    padding: $section-mobile-padding;
+    @media screen and (max-width: 767px) {
+      max-width: 480px;
+    }
+  }
+}
+
+.container {
+  @extend %container;
+}
+
+.section__title {
+  @include mobile-section-title;
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 767px) {
+    margin: -15px;
+  }
+}
+
+.clients__item {
+  @media screen and (max-width: 767px) {
+    /* маржин 15px, 1 маржин + 0.5*2 маржина по 
+бокам в строке, 2 элимента в строке 
+((100%-((0,5*2+1)*(15+15))/2)*/
+    width: $clac-width-item;
+    margin: 15px;
+  }
+}
+
+.clients__link {
+  @include centered-flex;
+  justify-content: center;
+
+  height: 90px;
+  border: 1px solid var(--link-color);
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-text);
+    outline: none;
+  }
+}
+
+.clients__logo {
+  fill: var(--link-color);
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: var(--accent-text);
+
+    transition: fill var(--timing-fn);
+  }
+}
