@@ -91,6 +91,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .page-header {
   position: relative;
   border-bottom: 1px solid var(--header-color-bottom);
@@ -185,6 +189,7 @@ body {
     top: 101%;
     left: 0;
     width: 100%;
+    z-index: 999;
   }
   .menu-container.is-open {
     display: block;
@@ -697,6 +702,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   background-color: var(--modal-background-color);
   -webkit-transition: var(--timing-fn);
   transition: var(--timing-fn);
