@@ -280,11 +280,11 @@
 
   min-width: 73px;
 
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
-  letter-spacing: 0.03em;
+  font-family: $main-font;
+  font-weight: $radio-button-font-weight;
+  font-size: $radio-button-font-size;
+  line-height: $radio-button-line-height;
+  letter-spacing: $radio-button-letter-spacing;
 
   transition: background-color, color var(--timing-fn);
 
@@ -293,25 +293,25 @@
 
 // Галерея проектов
 @mixin hover-card-text {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
+  font-weight: $hover-text-font-weight;
+  font-size: $hover-text-font-size;
+  line-height: $hover-text-line-height;
   color: var(--white);
 }
 
 @mixin portfolio-project-name {
   color: var(--main-text-color);
 
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  font-weight: $project-name-font-weight;
+  font-size: $project-name-font-size;
+  line-height: $project-name-line-height;
+  letter-spacing: $project-name-letter-spacing;
 }
 
 @mixin portfolio-project-type {
   color: var(--secondary-text-color);
 
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.88;
+  font-weight: $project-type-font-weight;
+  font-size: $project-type-font-size;
+  line-height: $project-type-line-height;
 }
