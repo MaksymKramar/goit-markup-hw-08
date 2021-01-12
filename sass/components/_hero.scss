@@ -8,7 +8,7 @@
     min-height: 400px;
 
     background-image: linear-gradient($linear-gradient),
-      url(../../image/Hero-optimized/hero-480.jpg);
+      url(../../image/Hero-optimized/mobile/hero-480.jpg);
     background-size: cover;
     background-position: center;
     background-color: var(--background-hero-section);
@@ -18,28 +18,57 @@
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       .hero {
-        background-image: url(../../image/Hero-optimized/hero-960.jpg);
+        background-image: url(../../image/Hero-optimized/mobile/hero-960.jpg);
       }
     }
     @media screen and (min-device-pixel-ratio: 3),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
       .hero {
-        background-image: url(../../image/Hero-optimized/hero-1440.jpg);
+        background-image: url(../../image/Hero-optimized/mobile/hero-1440.jpg);
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    min-height: 400px;
+
+    background-image: linear-gradient($linear-gradient),
+      url(../../image/Hero-optimized/tablet/hero-768-400.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--background-hero-section);
+    background-repeat: no-repeat;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .hero {
+        background-image: url(../../image/Hero-optimized/tablet/hero@2x.jpg);
+      }
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      .hero {
+        background-image: url(../../image/Hero-optimized/tablet/hero@3x.jpg);
       }
     }
   }
 }
 
 .hero__container {
-  @extend %container;
+  @include container;
   display: block;
   text-align: center;
 }
 
 .hero__title {
   @include common-hero-title;
-  @include mobile-hero-title;
+
+  @media screen and (max-width: 1199px) {
+    @include mobile-hero-title;
+  }
 }
 
 .button {

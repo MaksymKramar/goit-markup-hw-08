@@ -3,9 +3,12 @@
 
   @media screen and (max-width: 1199px) {
     padding: $section-mobile-padding;
-    @media screen and (max-width: 767px) {
-      max-width: 480px;
-    }
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
   }
 }
 
@@ -21,18 +24,23 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     margin: -15px;
   }
 }
 
 .clients__item {
+  @media screen and (max-width: 1199px) {
+    margin: 15px;
+  }
   @media screen and (max-width: 767px) {
     /* маржин 15px, 1 маржин + 0.5*2 маржина по 
 бокам в строке, 2 элимента в строке 
 ((100%-((0,5*2+1)*(15+15))/2)*/
-    width: $clac-width-item;
-    margin: 15px;
+    width: $calc-mobile-width-item;
+  }
+  @media screen and (min-width: 768px) {
+    width: $calc-tablet-width-item;
   }
 }
 
