@@ -45,13 +45,21 @@ $header-mobile-font-size: 18px;
 $header-mobile-line-height: 1.17;
 $header-mobile-letter-spacing: 0.02em;
 
-//page-header-text
-$header-padding-top: 32px;
-$header-padding-bottom: 32px;
-$header-font-weight: 500;
-$header-font-size: 14px;
-$header-line-height: 1.14;
-$header-letter-spacing: 0.02em;
+//Стили текста для Header tablet, desktop
+$header-desktop-font-weight: 500;
+$header-desktop-font-size: 14px;
+$header-desktop-line-height: 1.14;
+$header-desktop-letter-spacing: 0.02em;
+
+$header-desktop-padding: 32px 0;
+
+// //page-header-text
+// $header-padding-top: 32px;
+// $header-padding-bottom: 32px;
+// $header-font-weight: 500;
+// $header-font-size: 14px;
+// $header-line-height: 1.14;
+// $header-letter-spacing: 0.02em;
 
 $timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -99,7 +107,7 @@ $features-h-text-transform: uppercase;
 // стили описания (текста) особеностей
 $features-p-font-weight: 400;
 $features-p-font-size: 14px;
-$features-p-line-height: 1.7;
+$features-p-line-height: 1.71;
 
 // Команда
 
@@ -111,15 +119,17 @@ $team-line-height: 1.19;
 
 // Клиенты
 
-/* маржин 15px, 1 маржин + 0.5*2 маржина по 
+/*  НЕ ЗАБУДЬ ДОБАВИТЬ МИНУСОВЫЙ МАРЖИН РОДИТЕЛЮ!!! 
+маржин 15px, 1 маржин + 0.5*2 маржина по 
 бокам в строке, 2 элимента в строке 
 ((100%-((0,5*2+1)*(15+15))/2)*/
-$clac-width-item: calc((100% - 2 * 30px) / 2);
+$calc-mobile-width-item: calc((100% - 2 * 30px) / 2);
+$calc-tablet-width-item: calc((100% - 6 * 15px) / 3);
 
 // Footer
 $footer-font-weight: 400;
 $footer-font-size: 14px;
-$footer-line-height: 1.7;
+$footer-line-height: 1.71;
 
 // Модальное окно
 $mobile-modal-line-height: 1.5;
