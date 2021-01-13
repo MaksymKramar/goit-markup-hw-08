@@ -1,6 +1,12 @@
 .section__portfolio {
   @extend %section;
   padding: $section-mobile-padding;
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
 }
 
 .container {
@@ -13,16 +19,26 @@
 
 .radio__button__list {
   @include centered-flex;
-  flex-wrap: wrap;
 
-  margin-bottom: 40px;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
 }
 
 .radio__button__item:not(:last-child) {
   margin-right: 8px;
 
-  &:nth-child(-n + 3) {
-    margin-bottom: 15px;
+  @media screen and (max-width: 767px) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -40,10 +56,25 @@
   }
 }
 
+.portfolio__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: -15px;
+  }
+}
+
 .portfolio__item {
   border: 1px solid #eeeeee;
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+    width: calc((100% - 2 * 30px) / 2);
   }
 }
 
@@ -85,17 +116,33 @@
   }
 }
 
+.card__image {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 294px;
+  }
+}
+
 .card__text {
   @include hover-card-text;
 
-  position: absolute;
-  top: 77px;
-  left: 24px;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 77px;
+    left: 24px;
 
-  width: 402px;
+    width: 402px;
 
-  transform: translateY(150%);
+    transform: translateY(150%);
+  }
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 49px;
+    left: 24px;
 
+    width: 306px;
+    transform: translateY(125%);
+  }
   .portfolio__link:hover &,
   .portfolio__link:focus & {
     transform: translate(0);
@@ -105,6 +152,12 @@
 
 .project__wrapper {
   padding: 20px 24px;
+  // исправляет ошибку растягивания первой карточки
+  @media screen and (min-width: 768px) {
+    .portfolio__item:first-child & {
+      padding: 20px 24px 56px;
+    }
+  }
 }
 
 .project__name {
