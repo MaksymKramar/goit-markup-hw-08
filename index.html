@@ -123,16 +123,45 @@
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <ul class="projects__list list">
                     <li class="projects__item">
-                        <img src="./image/projects-images-1.jpg" alt="Печатают код" width="370" height="294">
+                        <picture>
+                            <source srcset="./image/Projects-optimized/img_1-370-294.webp 1x,
+                            ./image/Projects-optimized/img_1@2x.webp 2x,
+                            ./image/Projects-optimized/img_1@3x.webp 3x"
+                            type="image/webp">
+                        <img src="./image/Projects-optimized/img_1-370-294.jpg 1x,
+                        ./image/Projects-optimized/img_1@2x.jpg 2x,
+                        ./image/Projects-optimized/img_1@3x.jpg 3x" 
+                        alt="Печатают код" 
+                        width="370" height="294">
+                        </picture>
                         <p class="projects__text">Десктопные приложения</p>
                     </li>
                     <li class="projects__item">
-                        <img src="./images/projects-images-2.jpg" alt="Держат в руках мобильный" width="370" height="294">
+                        <picture>
+                            <source srcset="./image/Projects-optimized/img_2-370-294.webp 1x,
+                            ./image/Projects-optimized/img_2@2x.webp 2x,
+                            ./image/Projects-optimized/img_2@3x.webp 3x" 
+                            type="image/webp">
+                            <img src="./image/Projects-optimized/img_2-370-294.jpg 1x,
+                            ./image/Projects-optimized/img_2@2x.jpg 2x,
+                            ./image/Projects-optimized/img_2@3x.jpg 3x" 
+                            alt="Держат в руках мобильный"
+                            width="370" height="294">
+                        </picture>
                         <p class="projects__text">Мобильные приложения</p>
                     </li>
                     <li class="projects__item">
-                        <img src="./images/projects-images-3.jpg" alt="Держат в руках планшет с палитрой цветов" width="370"
-                            height="294">
+                        <picture>
+                            <source srcset="./image/Projects-optimized/img_3-370-294.webp 1x,
+                            ./image/Projects-optimized/img_3@2x.webp 2x,
+                            ./image/Projects-optimized/img_3@3x.webp 3x" 
+                            type="image/webp">
+                            <img src="./image/Projects-optimized/img_3-370-294.jpg 1x,
+                            ./image/Projects-optimized/img_3@2x.jpg 2x,
+                            ./image/Projects-optimized/img_3@3x.jpg 3x" 
+                            alt="Держат в руках планшет с палитрой цветов"
+                            width="370" height="294">
+                        </picture>
                         <p class="projects__text">Дизайнерские решения</p>
                     </li>
                 </ul>
@@ -155,7 +184,7 @@
                                 class="team__photo" 
                                 src="./image/Team-optimized/ihor-demjanenko.jpg" 
                                 alt="Фотография члена команды"
-                                width="450" height="460"
+                                
                             >
                         </picture>                        
                         <h3 class="team__name">Игорь Демьяненко</h3>
@@ -203,7 +232,7 @@
                                 class="team__photo"
                                 src="./image/Team-optimized/olga-repyna.jpg"
                                 alt="Фотография члена команды" 
-                                width="450" height="460"
+                                
                             >
                         </picture>
                         <h3 class="team__name">Ольга Репина</h3>
@@ -251,7 +280,7 @@
                                 class="team__photo"
                                 src="./image/Team-optimized/nikolay-tarasov.jpg" 
                                 alt="Фотография члена команды" 
-                                width="450" height="460"
+                                
                             >
                         </picture>
                         <h3 class="team__name">Николай Тарасов</h3>
@@ -298,7 +327,7 @@
                                 ./image/Team-optimized/michail-ermakov@3x.jpg 3x" class="team__photo"
                                 src="./image/Team-optimized/michail-ermakov.jpg" 
                                 alt="Фотография члена команды" 
-                                width="450" height="460"
+                                
                             >
                         </picture>
                         <h3 class="team__name">Михаил Ермаков</h3>
@@ -491,7 +520,7 @@
                     </label>
                     <label class="form__policy__text">
                         <input class="checkbox" type="checkbox" name="user-policy">
-                        <span class="icon__check"></span>Соглашаюсь с рассылкой и принимаю &nbsp
+                        <span class="icon__check"></span>Соглашаюсь с рассылкой и принимаю &nbsp;
                         <a class="form__policy__link link" href="#">Условия договора</a>   
                     </label>
                     <button class="button" type="submit">Отправить</button>
