@@ -254,17 +254,22 @@
 }
 
 @mixin form-common-policy-text {
-  display: flex;
-  align-items: center;
+  @include centered-flex;
+  justify-content: center;
   margin-bottom: 30px;
   color: var(--secondary-text-color);
   cursor: pointer;
+  letter-spacing: 0.03em;
 }
 
 @mixin form-mobile-policy-text {
   font-weight: $mobile-policy-font-weight;
   font-size: $mobile-policy-font-size;
   line-height: $mobile-policy-line-height;
+}
+@mixin form-desktop-policy-text {
+  font-size: $desktop-policy-font-size;
+  line-height: $desktop-policy-line-height;
 }
 
 // Портфолио

@@ -17,8 +17,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  min-height: 609px;
+
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    min-height: 609px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
 
   padding: 40px;
 
@@ -120,7 +127,13 @@
 
 .form__policy__text {
   @include form-common-policy-text;
-  @include form-mobile-policy-text;
+  white-space: pre;
+  @media screen and (max-width: 1199px) {
+    @include form-mobile-policy-text;
+  }
+  @media screen and (min-width: 1200px) {
+    @include form-desktop-policy-text;
+  }
 }
 
 .form__policy__link {
