@@ -20,11 +20,9 @@ $main-letter-spacing: 0.03em;
 
 // Свойства Секции
 $section-mobile-padding: 60px 0;
+$section-desktop-padding: 94px 0;
 
 // Свойства контейнера
-$desktop-container-width: 480px;
-$desktop-container-width: 768px;
-$desktop-container-width: 1200px;
 $container-left-padding: 15px;
 $container-right-padding: 15px;
 
@@ -38,6 +36,9 @@ $logo-font-weight: 700;
 
 $logo-mobile-font-size: 24px;
 $logo-mobile-line-height: 1.17;
+
+$logo-desktop-font-size: 26px;
+$logo-desktop-line-height: 1.19;
 
 //Стили текста для Header mobile
 $header-mobile-font-weight: 500;
@@ -53,25 +54,11 @@ $header-desktop-letter-spacing: 0.02em;
 
 $header-desktop-padding: 32px 0;
 
-// //page-header-text
-// $header-padding-top: 32px;
-// $header-padding-bottom: 32px;
-// $header-font-weight: 500;
-// $header-font-size: 14px;
-// $header-line-height: 1.14;
-// $header-letter-spacing: 0.02em;
-
 $timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 // Hero
-$hero-max-width: 1600px;
 
 $linear-gradient: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
-
-// $desktop-hero-padding-top: 200px;
-// $dsektop-hero-padding-bottom: 200px;
-
-// $hero-min-height: 600px;
 
 // common-hero-title
 $hero-color: var(--white);
@@ -85,9 +72,10 @@ $mobile-hero-line-height: 1.62;
 $mobile-hero-width: 360px;
 
 // desktop-hero-title
-$desktop-hero-margin: 0 auto 30px auto;
 $desktop-hero-font-size: 44px;
 $desktop-hero-line-height: 1.36;
+$desctop-hero-width: 696px;
+$desktop-hero-margin: 0 auto 30px;
 
 // Шрифт кнопки
 $button-font-family: $main-font;
@@ -95,6 +83,10 @@ $button-font-weight: 700;
 $button-font-size: 16px;
 $button-line-height: 1.88;
 $button-letter-spacing: 0.06em;
+
+$order-button-padding: 10px 32px;
+$send-button-padding: 10px 55px;
+$subscribe-button-padding: 10px 29px;
 
 // Блок Особености
 
@@ -124,7 +116,8 @@ $team-line-height: 1.19;
 бокам в строке, 2 элимента в строке 
 ((100%-((0,5*2+1)*(15+15))/2)*/
 $calc-mobile-width-item: calc((100% - 2 * 30px) / 2);
-$calc-tablet-width-item: calc((100% - 6 * 15px) / 3);
+$calc-tablet-width-item: calc((100% - 3 * 30px) / 3);
+$calc-desktop-width-item: calc((100% - 6 * 30px) / 6);
 
 // Footer
 $footer-font-weight: 400;

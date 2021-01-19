@@ -6,19 +6,19 @@
 //Стили контейннера
 
 @mixin container {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   padding-left: $container-left-padding;
   padding-right: $container-right-padding;
 
   @media screen and (min-width: 480px) {
-    width: 480px;
+    max-width: 480px;
+    margin: 0 auto;
   }
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 768px;
   }
   @media screen and (min-width: 1200px) {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -72,13 +72,8 @@
 }
 
 @mixin logo-desktop-styles {
-  display: inline-block;
-
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
+  font-size: $logo-desktop-font-size;
+  line-height: $logo-desktop-line-height;
 }
 
 // Стили текста для Header mobile
@@ -98,23 +93,6 @@
 }
 
 //Блок Герой
-// @mixin hero-section {
-//   background-image: linear-gradient($linear-gradient), url(../images/bg.jpg);
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-color: var(--background-hero-section);
-//   background-position: center;
-
-//   margin-left: auto;
-//   margin-right: auto;
-//   padding-top: $hero-padding-top;
-//   padding-bottom: $hero-padding-bottom;
-
-//   max-width: $hero-max-width;
-//   min-height: $hero-min-height;
-
-//   text-align: center;
-// }
 
 // Текст Героя
 
@@ -135,8 +113,10 @@
 
 // Стили для desktop
 @mixin desktop-hero-title {
-  max-width: 696px;
-  margin: $desktophero-margin;
+  font-size: $desktop-hero-font-size;
+  line-height: $desktop-hero-line-height;
+  max-width: $desctop-hero-width;
+  margin: $desktop-hero-margin;
 }
 
 // Название секций
@@ -158,7 +138,7 @@
 
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.16;
+  line-height: 1.17;
   text-align: center;
 }
 
