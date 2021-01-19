@@ -150,3 +150,8 @@
     border: 2px solid var(--accent-text);
   }
 }
+
+.button {
+  @extend %button;
+  padding: $send-button-padding;
+}

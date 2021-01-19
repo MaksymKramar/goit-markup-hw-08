@@ -4,24 +4,35 @@
   @media screen and (max-width: 1199px) {
     padding: $section-mobile-padding;
   }
+  @media screen and (min-width: 1200px) {
+    padding: $section-desktop-padding;
+  }
 }
 
 .footer__container {
-  @extend %container;
-  text-align: center;
+  @include container;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-around;
   }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 .footer__logo {
   @include logo-general-styles;
+
   @include logo-mobile-styles;
 
-  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    @include logo-desktop-styles;
+  }
 
   &--blue {
     color: var(--accent-text);
@@ -32,7 +43,11 @@
 }
 
 .address {
-  margin-bottom: 60px;
+  margin-top: 20px;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .address__item {
@@ -52,7 +67,9 @@
 }
 
 .social__container {
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
 .accent {
@@ -79,19 +96,37 @@
 
 .subscribe-box {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: flex-end;
+  }
+}
+
+.subscribe {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
   }
 }
 
 .subscribe__email {
   padding-left: 16px;
-  width: 450px;
-  height: 50px;
 
-  margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+  height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -102,6 +137,7 @@
 .subscribe__button {
   @include centered-flex;
   @extend %button;
+  padding: $subscribe-button-padding;
 
   @media screen and (min-width: 768px) {
     margin-left: auto;
