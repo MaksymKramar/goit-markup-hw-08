@@ -60,16 +60,8 @@ svg {
   margin-right: auto;
 }
 
-.container, .footer__container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .subscribe__button {
   display: inline-block;
-  padding: 10px 32px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -107,27 +99,27 @@ body.modal-open {
 }
 
 .page-header__container {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
   .page-header__container {
-    width: 480px;
+    max-width: 480px;
+    margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) {
   .page-header__container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .page-header__container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -138,9 +130,14 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .header__logo {
@@ -155,6 +152,13 @@ body.modal-open {
   .header__logo {
     font-size: 24px;
     line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -176,6 +180,8 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .logo {
     margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 
@@ -301,6 +307,16 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .navigation__link {
+    -webkit-transition: color var(--timing-fn);
+    transition: color var(--timing-fn);
+  }
+  .navigation__link:hover, .navigation__link:focus {
+    color: var(--accent-text);
+  }
+}
+
 .current {
   color: var(--accent-text);
   position: relative;
@@ -315,6 +331,20 @@ body.modal-open {
   height: 4px;
   background-color: var(--accent-text);
   border-radius: 2px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .contact__link {
@@ -348,12 +378,31 @@ body.modal-open {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__link {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
   .contact__link:not(:last-child) {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    padding: 32px 0;
+    -webkit-transition: color var(--timing-fn);
+    transition: color var(--timing-fn);
+  }
+  .contact__link:not(:last-child) {
+    margin-right: 30px;
+  }
+  .contact__link:hover, .contact__link:focus {
+    color: var(--accent-text);
   }
 }
 
@@ -366,15 +415,28 @@ body.modal-open {
   padding: 60px 0;
 }
 
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 @media screen and (min-width: 480px) {
-  .section__portfolio {
+  .container {
     max-width: 480px;
+    margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .section__portfolio {
+  .container {
     max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -415,6 +477,12 @@ body.modal-open {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .radio__button__list {
+    margin-bottom: 50px;
   }
 }
 
@@ -483,6 +551,13 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    margin: 15px;
+    width: calc((100% - 6 * 15px) / 3);
+  }
+}
+
 .portfolio__link {
   display: inline-block;
   -webkit-transition: -webkit-box-shadow var(--timing-fn);
@@ -504,6 +579,7 @@ body.modal-open {
 .card__thumb {
   position: relative;
   overflow: hidden;
+  height: 294px;
 }
 
 .card__thumb::before {
@@ -530,11 +606,11 @@ body.modal-open {
   transition: transform var(--timing-fn), -webkit-transform var(--timing-fn);
 }
 
-@media screen and (min-width: 768px) {
-  .card__image {
-    width: 354px;
-    height: 294px;
-  }
+.card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card__text {
@@ -580,7 +656,7 @@ body.modal-open {
   padding: 20px 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio__item:first-child .project__wrapper {
     padding: 20px 24px 56px;
   }
@@ -612,8 +688,41 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .page-footer {
+    padding: 94px 0;
+  }
+}
+
 .footer__container {
-  text-align: center;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .footer__container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__container {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -631,6 +740,14 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .footer__logo {
   display: inline-block;
   font-family: Raleway, sans-serif;
@@ -639,7 +756,13 @@ body.modal-open {
   cursor: pointer;
   font-size: 24px;
   line-height: 1.17;
-  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .footer__logo--blue {
@@ -651,7 +774,13 @@ body.modal-open {
 }
 
 .address {
-  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  .address {
+    margin-bottom: 60px;
+  }
 }
 
 .address__item {
@@ -672,8 +801,10 @@ body.modal-open {
   color: var(--footer-link-color);
 }
 
-.social__container {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .social__container {
+    margin-bottom: 60px;
+  }
 }
 
 .accent {
@@ -733,29 +864,64 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
+  .subscribe-box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscribe-box {
     display: block;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .subscribe-box {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin-right: 12px;
+  }
+}
+
 .subscribe__email {
   padding-left: 16px;
-  width: 450px;
   height: 50px;
-  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--background-hero-section);
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe__email {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__email {
+    width: 358px;
+  }
 }
 
 .subscribe__button {
@@ -765,6 +931,7 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px 29px;
 }
 
 @media screen and (min-width: 768px) {
