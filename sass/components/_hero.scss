@@ -17,16 +17,15 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      .hero {
-        background-image: url(../image/Hero-optimized/mobile/hero-960.jpg);
-      }
+      background-image: linear-gradient($linear-gradient),
+        url(../image/Hero-optimized/mobile/hero-960@2x.jpg);
     }
+
     @media screen and (min-device-pixel-ratio: 3),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
-      .hero {
-        background-image: url(../image/Hero-optimized/mobile/hero-1440.jpg);
-      }
+      background-image: linear-gradient($linear-gradient),
+        url(../image/Hero-optimized/mobile/hero-1440@3x.jpg);
     }
   }
   @media screen and (min-width: 768px) {
@@ -43,16 +42,14 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      .hero {
-        background-image: url(../image/Hero-optimized/tablet/hero@2x.jpg);
-      }
+      background-image: linear-gradient($linear-gradient),
+        url(../image/Hero-optimized/tablet/hero@2x.jpg);
     }
     @media screen and (min-device-pixel-ratio: 3),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
-      .hero {
-        background-image: url(../image/Hero-optimized/tablet/hero@3x.jpg);
-      }
+      background-image: linear-gradient($linear-gradient),
+        url(../image/Hero-optimized/tablet/hero@3x.jpg);
     }
   }
   @media screen and (min-width: 1200px) {
@@ -69,16 +66,14 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      .hero {
-        background-image: url(../image/Hero-optimized/desktop/hero@2x.jpg);
-      }
+      background-image: linear-gradient($linear-gradient),
+        url(../image/Hero-optimized/desktop/hero@2x.jpg);
     }
     @media screen and (min-device-pixel-ratio: 3),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
-      .hero {
-        background-image: url(../image/Hero-optimized/desktop/hero@3x.jpg);
-      }
+      background-image: linear-gradient($linear-gradient),
+        url(../image/Hero-optimized/desktop/hero@3x.jpg);
     }
   }
 }
